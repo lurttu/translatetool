@@ -45,3 +45,6 @@ b {
   display: flex;
   flex-direction: row;
 }
+.result {
+  flex-basis: auto;
+}

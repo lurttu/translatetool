@@ -22,26 +22,7 @@ const App = () => {
     <div>
       <h1>辞書正引き</h1>
       <Input handler={handleTextChange} />
-      {/* <Output text={text} /> */}
-      <div class='container'>
-        {text.map(text => {
-          return (
-            <div key={Math.random() * 999999}>
-              {text.map(item => {
-                return (
-                  <p key={Math.random() * 9999999999}>
-                    <b>{item.slug}</b>
-                    {' ' + item.japanese[0].reading + ' '}
-                    {item.senses.map(sense =>
-                      sense.english_definitions.map(ed => <i>{ed + ', '}</i>)
-                    )}
-                  </p>
-                )
-              })}
-            </div>
-          )
-        })}
-      </div>
+      <Output text={text} />
     </div>
   )
 }
