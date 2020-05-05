@@ -7,8 +7,9 @@ const Output = ({ text }) => {
         return (
           <div className={'result'} key={Math.random() * 999999}>
             {text.map(item => {
+              console.log(item)
               return (
-                <p key={Math.random() * 9999999999}>
+                <p key={item.slug}>
                   <b>{item.slug}</b>
                   {' ' + item.japanese[0].reading + ' '}
                   {item.senses.map(sense =>
